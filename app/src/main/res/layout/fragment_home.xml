@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".View.HomeFragment">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="76dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/recipe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:letterSpacing="0.05"
+        android:text="SmartRecipeFinder"
+        android:textColor="#3E2723"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView" />
+
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:lineSpacingExtra="4dp"
+        android:paddingHorizontal="32dp"
+        android:text="Evdeki malzemelerini gir, sana en uygun tarifleri biz bulalım!"
+        android:textAlignment="center"
+        android:textColor="#6D4C41"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appNameText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addIngredientsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Malzeme Ekle"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:backgroundTint="#FABC67"
+        app:cornerRadius="26dp"
+        app:elevation="4dp"
+        app:icon="@drawable/ic_add"
+        app:iconPadding="8dp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleText"
+        app:layout_constraintWidth_percent="0.75" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/getRecipesButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tarif Önerisi Al"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:backgroundTint="#BE814F03"
+        app:cornerRadius="26dp"
+        app:elevation="4dp"
+        app:icon="@drawable/ic_search"
+        app:iconPadding="8dp"
+        app:iconTint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addIngredientsButton"
+        app:layout_constraintWidth_percent="0.75" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
