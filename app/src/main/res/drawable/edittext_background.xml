@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Odaklandığında (yazarken) -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFF8F2" /> <!-- açık bej arka plan -->
+            <stroke android:width="2dp" android:color="#C2874E" /> <!-- sıcak vurgu rengi -->
+            <corners android:radius="12dp" />
+            <padding android:left="12dp" android:right="12dp" />
+        </shape>
+    </item>
+
+    <!-- Normal görünüm -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFDF9" /> <!-- krem ton -->
+            <stroke android:width="1.5dp" android:color="#E2C9A2" /> <!-- açık altın çizgi -->
+            <corners android:radius="12dp" />
+            <padding android:left="12dp" android:right="12dp" />
+        </shape>
+    </item>
+</selector>
