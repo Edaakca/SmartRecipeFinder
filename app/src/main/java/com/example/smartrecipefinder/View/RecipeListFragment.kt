@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartrecipefinder.ViewModel.RecipeViewModel
 import com.example.smartrecipefinder.databinding.FragmentRecipeListBinding
+import kotlinx.coroutines.launch
 
 class RecipeListFragment : Fragment() {
 
@@ -40,11 +42,14 @@ class RecipeListFragment : Fragment() {
 
         viewModel.fetchRecipes(ingredientsString, apiKey)
 
-        lifecycleScope.launchWhenStarted {
-            viewModel.recipes.collect { list ->
-                adapter.updateList(list)
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
+                viewModel.recipes.collect { list ->
+                    adapter.updateList(list)
+                }
             }
         }
+
     }
 
     override fun onDestroyView() {
