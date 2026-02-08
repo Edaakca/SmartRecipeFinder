@@ -41,8 +41,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewIngredients"
-        android:layout_width="369dp"
-        android:layout_height="442dp"
+        android:layout_width="362dp"
+        android:layout_height="352dp"
         android:layout_marginTop="50dp"
         android:layout_weight="1"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,16 +53,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/bottom_nav_icon_active"
         android:elevation="4dp"
+        android:visibility="gone"
         android:text="Tarif Bul"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewIngredients"
-        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/buttonClearIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#B89053"
+        android:elevation="4dp"
+        android:text="Temizle"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFindRecipe"
         tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

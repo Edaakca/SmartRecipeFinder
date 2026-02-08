@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "391359547510",
+    "project_id": "smartrecipefinder-2ea33",
+    "storage_bucket": "smartrecipefinder-2ea33.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391359547510:android:45928952e67b4bb12d7757",
+        "android_client_info": {
+          "package_name": "com.example.smartrecipefinder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqF1DgHT8oTj2K798rTd0RAbsDB-u3JQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

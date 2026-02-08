@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.example.smartrecipefinder.databinding.FragmentFavoritesBinding
 
 class FavoritesFragment : Fragment() {
-
     private var _binding: FragmentFavoritesBinding? = null
     private val binding get() = _binding!!
 

@@ -12,7 +12,6 @@ class IngredientsAdapter(
     private val ingredients: MutableList<String>,
     private val onDeleteClick: (Int) -> Unit
 ) : RecyclerView.Adapter<IngredientsAdapter.IngredientViewHolder>() {
-
     inner class IngredientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textIngredient: TextView = itemView.findViewById(R.id.textIngredient)
         val buttonDelete: ImageButton = itemView.findViewById(R.id.buttonDelete)
