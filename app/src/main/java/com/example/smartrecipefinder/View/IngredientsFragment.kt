@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartrecipefinder.R
+import com.example.smartrecipefinder.Util.toSearchable
 import com.example.smartrecipefinder.databinding.FragmentIngredientsBinding
 class IngredientsFragment : Fragment() {
     private var _binding: FragmentIngredientsBinding? = null
@@ -52,7 +53,8 @@ class IngredientsFragment : Fragment() {
         binding.buttonAddIngredient.setOnClickListener {
             val item = binding.editTextIngredient.text.toString().trim()
             if (item.isNotEmpty()) {
-                ingredients.add(item)
+                val normalizedItem = item.toSearchable()
+                ingredients.add(normalizedItem)
                 adapter.notifyItemInserted(ingredients.size - 1)
                 binding.editTextIngredient.text.clear()
                 binding.buttonFindRecipe.visibility = View.VISIBLE

@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartrecipefinder.Data.RecipeRepository
+import com.example.smartrecipefinder.Util.toSearchable
 import com.example.smartrecipefinder.ViewModel.RecipeViewModel
 import com.example.smartrecipefinder.ViewModel.RecipeViewModelFactory
 import com.example.smartrecipefinder.databinding.FragmentRecipeListBinding
@@ -51,8 +52,10 @@ class RecipeListFragment : Fragment() {
                     allRecipes
                 } else {
                     allRecipes.filter { recipe ->
+                        val searchableRecipe = recipe.ingredients.toSearchable()
                         selectedIngredients.all { ing ->
-                            recipe.ingredients.contains(ing, ignoreCase = true)
+                            val searchableIng = ing.toSearchable()
+                            searchableRecipe.contains(searchableIng)
                         }
                     }
                 }
