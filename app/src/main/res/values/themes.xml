@@ -1,9 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.SmartRecipeFinder" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Theme.SmartRecipeFinder" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#9D8C87</item>
+        <item name="colorPrimaryContainer">#FFF5E8</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorSecondary">#8D6E63</item>
+        <item name="colorSecondaryContainer">#FFEDE0</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <item name="colorSurface">#FFF8F2</item>
+        <item name="colorOnSurface">#5D4037</item>
+        <item name="colorSurfaceVariant">#FFEDE0</item>
+        <item name="colorOnSurfaceVariant">#6D4C41</item>
+
+        <item name="android:windowBackground">?attr/colorSurface</item>
+
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="cardViewStyle">@style/Widget.Material3.CardView.Filled</item>
+
+        <item name="buttonStyle">@style/Widget.Material3.Button</item>
+        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox</item>
+
     </style>
 
-    <style name="Theme.SmartRecipeFinder" parent="Base.Theme.SmartRecipeFinder" />
+    <style name="Widget.App.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">#CAB9B1</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardElevation">1dp</item>
+    </style>
 </resources>

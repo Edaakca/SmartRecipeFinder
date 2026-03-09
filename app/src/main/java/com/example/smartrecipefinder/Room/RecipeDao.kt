@@ -10,7 +10,6 @@ interface RecipeDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(recipes: List<RecipeEntity>)
-
     @Query("SELECT * FROM recipes")
     suspend fun getAll(): List<RecipeEntity>
 }

@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
     id("com.google.devtools.ksp")
+    id("kotlin-parcelize")
+
 }
 
 android {
@@ -83,5 +85,7 @@ dependencies {
     ksp("androidx.room:room-compiler:$room_version")
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation("org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.0")
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
 
 }

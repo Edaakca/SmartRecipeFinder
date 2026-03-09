@@ -1,50 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="12dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="6dp"
-    app:cardBackgroundColor="#FFFFFF"
-    app:cardPreventCornerOverlap="true">
+    style="@style/Widget.App.Card">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageRecipe"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Yemek fotoğrafı"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/textRecipeTitle"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:padding="16dp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#212121"
-            android:ellipsize="end"
-            android:maxLines="2" />
+            android:textColor="#FFFFFF"
+            android:background="@drawable/gradient_title_overlay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/textRecipeTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textSize="16sp"
-            android:textColor="#757575"
-            android:text="10 dk" />
+            android:layout_margin="12dp"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/circle_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintBottom_toBottomOf="@id/imageRecipe"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/textIngredientsPreview"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:textSize="15sp"
-            android:textColor="#424242"
-            android:maxLines="3"
-            android:ellipsize="end" />
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/imageRecipe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

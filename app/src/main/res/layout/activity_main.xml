@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
+    android:background="?attr/colorSurface"
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -25,8 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@color/bottom_nav_background"
         app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/bottom_nav_item_background"
+        app:itemRippleColor="?attr/colorPrimaryContainer"
         app:itemIconTint="@color/bottom_nav_item_colors"
         app:itemTextColor="@color/bottom_nav_item_colors"
         app:itemBackground="@drawable/bottom_nav_item_background"
@@ -34,7 +35,6 @@
         app:itemIconSize="28dp"
         android:paddingTop="3dp"
         android:paddingBottom="3dp"
-        android:elevation="8dp"
-        app:itemRippleColor="@android:color/transparent"/>
+        android:elevation="5dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

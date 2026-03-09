@@ -21,16 +21,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         repository = RecipeRepository(applicationContext)
-
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
-
         lifecycleScope.launch {
             repository.loadRecipesFromAssetsIfNeeded()
         }
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-
         NavigationUI.setupWithNavController(bottomNav, navController, false)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {

@@ -56,7 +56,7 @@ class IngredientsFragment : Fragment() {
                 val normalizedItem = item.toSearchable()
                 ingredients.add(normalizedItem)
                 adapter.notifyItemInserted(ingredients.size - 1)
-                binding.editTextIngredient.text.clear()
+                binding.editTextIngredient.text?.clear()
                 binding.buttonFindRecipe.visibility = View.VISIBLE
                 saveIngredients()
                 updateClearButtonVisibility()

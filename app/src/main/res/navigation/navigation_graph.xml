@@ -30,10 +30,18 @@
         android:id="@+id/recipeListFragment"
         android:name="com.example.smartrecipefinder.View.RecipeListFragment"
         android:label="fragment_recipe_list"
-        tools:layout="@layout/fragment_recipe_list" />
+        tools:layout="@layout/fragment_recipe_list" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.example.smartrecipefinder.View.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.smartrecipefinder.View.RecipeDetailFragment"
+        android:label="RecipeDetailFragment" />
 </navigation>
